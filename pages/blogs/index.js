@@ -1,6 +1,6 @@
+import React from "react";
 import axios from "axios";
 import Link from "next/link";
-import React from "react";
 import { formatDateToDD, formatDateToMM } from "@/utils/utils";
 
 const Blogs = ({ blogs }) => {
