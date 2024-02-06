@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 import Link from "next/link";
-import Image from 'next/image';
 import { formatDateToMM, truncateText } from "@/utils/utils";
 
 const Blogs = ({ blogs }) => {
@@ -15,7 +14,7 @@ const Blogs = ({ blogs }) => {
                 <div className="p-4 md:w-1/3">
                   <div className="h-full border-2 relative border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                     {item?.yoast_head_json?.og_image?.length >= 0 && (
-                      <Image
+                      <img
                         className="lg:h-48 md:h-36 w-full object-fill"
                         src={item?.yoast_head_json?.og_image[0]?.url}
                         alt={item?.yoast_head_json?.og_image[0]?.type}
