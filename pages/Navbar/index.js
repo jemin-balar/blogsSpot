@@ -41,7 +41,7 @@ export const Navbar = () => {
       </nav>
       <div className={styles.navbar}>
         <div className={styles.navheading}>
-          <span className="text-blue-500 text-2xl text-2xl">
+          <span className="text-blue-500 text-2xl">
             blogs<span className="text-pink-700 ">Spot</span>
           </span>
           <FaBars onClick={() => setIsDisplay(!isDisplay)} />
