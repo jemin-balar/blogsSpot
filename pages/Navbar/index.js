@@ -5,7 +5,7 @@ import { IoMdClose } from "react-icons/io";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export const Navbar = () => {
+const Navbar = () => {
   const router = useRouter();
   const { pathname } = router;
   const [isDisplay, setIsDisplay] = useState(true);
@@ -81,3 +81,5 @@ export const Navbar = () => {
     </>
   );
 };
+
+export default Navbar;
