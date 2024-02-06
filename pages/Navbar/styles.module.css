@@ -1,0 +1,249 @@
+.nav {
+    padding: 19px 35px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+}
+
+.lnav {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    width: 12rem;
+    position: relative;
+}
+
+.lnav h1 {
+    display: flex;
+    width: 148px;
+    height: 51px;
+    background: var(--logo);
+    padding: 14px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    position: absolute;
+    margin-top: 50px;
+}
+
+.rnav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.rnav li {
+    display: flex;
+    width: 126px;
+    height: 40px;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+}
+
+.ullist {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.navtext a {
+    color: #1e90f9 !important;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.textcolor a {
+    color: #3c4046 !important;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 710px) {
+    .nav {
+        width: 100%;
+        padding: 0%;
+    }
+
+    .lnav h1 {
+        display: block;
+        margin-top: 117px;
+        margin-left: 39px;
+        position: fixed;
+    }
+
+    .rnav {
+        display: block;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-decoration: none;
+        position: fixed;
+        right: 0%;
+        top: 0%;
+        width: 256px;
+        height: 844px;
+        background-color: #ffff;
+        z-index: 999;
+        align-items: flex-start;
+        box-shadow: 10px 0 -10px black;
+        transition: right 0.3s;
+    }
+
+    .ullist {
+        display: flex;
+        flex-direction: column;
+        margin-top: 99px;
+        padding-right: 55px;
+    }
+
+    .logo {
+        display: block;
+        top: 32px;
+        right: 33px;
+        position: fixed;
+    }
+
+    .rsidebar {
+        right: 0%;
+        position: fixed;
+        right: 0%;
+        top: 0%;
+        background-color: #ffff;
+        box-shadow: 10px 0 -10px black;
+        display: flex;
+        width: 256px;
+        height: 844px;
+        padding: 30px 20px 50px 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 9px;
+        height: 100%;
+        z-index: 100;
+    }
+}
+
+.navbar {
+    border: 1px solid #f0f0f0;
+    padding: 15px 20px 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #ffff;
+}
+
+.navheading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navpanel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 99;
+}
+
+.cart_content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    animation-duration: 3s;
+    animation: sliderwindow 0.4s ease-in-out;
+    transform: translateX(0);
+    z-index: 1;
+    padding: 30px 20px 50px 20px;
+    background-color: #f0f0f0;
+}
+
+.opac_layer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    background-color: #41383838;
+}
+
+@keyframes sliderwindow {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.show {
+    display: none;
+}
+
+.hide {
+    display: block;
+}
+
+.navitem {
+    font-size: 22px;
+    font-style: normal;
+    display: flex;
+    margin-left: 5px;
+    color: #3c4046;
+}
+
+.active {
+    color: #1e90f9;
+}
+
+.uline {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-top: 9px;
+}
+
+.activetag {
+    border-radius: 10px;
+    background: #1e90f9;
+    width: 3px;
+    height: 18px;
+}
+
+@media only screen and (min-width: 769px) {
+    .navbar {
+        display: none;
+    }
+
+    .navpanel {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    .cart_content {
+        width: 256px;
+    }
+}
